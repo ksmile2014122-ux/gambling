@@ -27,4 +27,3 @@ def gambling_sibmanwon() :
                 break
             
 gambling()
-123
