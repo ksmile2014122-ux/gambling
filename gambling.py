@@ -1,7 +1,42 @@
 import random
+### 연서님 코드 
+def Randgame(my_money):
+    while True:
+        palyer = random.randint(1, 30)
+        computer = random.randint(1, 30)
+        i = int(input("계속 하시려면 1번을 눌러주세요. 원하지 않는다면 2번을 눌러주세요 : "))
 
-def gambling_sibmanwon() : 
-    money = int(input("사용할 총 금액을 입력하세요 : ")) 
+        if i == 1:
+            if palyer > computer:
+                my_money += 1000 
+                print("이겼습니다!! 🥳")
+                print(f"{palyer}가 당신 숫자입니다.")
+                print(f"{computer}가 딜러 숫자입니다.")
+                print(f"{my_money}가 당신이 소지한 돈입니다.")
+            
+            elif palyer < computer:
+                my_money -=  1000
+                
+                print("졌습니다")
+                print(f"{palyer}가 당신 숫자입니다.")
+                print(f"{computer}가 딜러 숫자입니다.")
+                print(f"{my_money}가 당신이 소지한 돈입니다.")
+                if my_money <= 0:
+                    print("돈을 다 잃었습니다. 게임 오버!")
+                    break
+    
+            else:
+                print(f"{palyer}가 당신 숫자입니다.")
+                print(f"{computer}가 딜러 숫자입니다.")
+                print(f"{my_money}가 당신이 소지한 돈입니다.")
+                print("비겼습니다! 다시 진행합니다.")
+        elif i == 2:
+            print("게임을 종료합니다.")
+            print(f"{my_money}가 당신이 소지한 돈입니다.")
+            break
+
+### 조경인 코드 
+def gambling_sibmanwon(money) : 
 
     while True : 
         if money < 100000 : 
@@ -26,4 +61,3 @@ def gambling_sibmanwon() :
             elif aa == 0 : 
                 break
             
-gambling()
