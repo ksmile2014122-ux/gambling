@@ -51,4 +51,3 @@ def gambling_1million():
 
 gambling_1million()
 
-123
